@@ -35,6 +35,9 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        //Just for GITHUB. To be deleted.
         //Validate
         $this->validate($request, [
             'x' => 'required',
