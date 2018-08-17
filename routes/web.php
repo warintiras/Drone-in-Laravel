@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/', 'PagesController@index');
 
-Route::resource('posts', 'PostsController');
+Route::resource('posts', 'PositionController');

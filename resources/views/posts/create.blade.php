@@ -25,7 +25,7 @@
         <input type="submit" value="Report" name="submit_report">
 
      </form> -->
-        {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+        {!! Form::open(['action' => 'PositionController@store', 'method' => 'POST']) !!}
          <div class="form-group">
             {{Form::label('x', 'X:')}}
             {{Form::text('x', '', ['class' => 'required'])}}

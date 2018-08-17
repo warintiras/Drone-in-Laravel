@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class A extends Migration
+class AddPositionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,7 @@ class A extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->string('newx');
-            $table->string('newy');
-            $table->string('newf');
-        });
+        //git 
     }
 
     /**
@@ -27,8 +23,6 @@ class A extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            //
-        });
+        //
     }
 }
