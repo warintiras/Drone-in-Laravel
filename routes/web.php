@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'PagesController@index');
+//Route::get('/', 'PagesController@index');
 
-Route::resource('posts', 'PositionController');
+Route::get('/', 'PositionController@index');
+Route::resource('positions', 'PositionController');

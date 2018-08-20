@@ -14,7 +14,7 @@ class PositionController extends Controller
      */
     public function index()
     {
-        return view('posts/index');
+        return view('positions/create');
     }
 
     /**
@@ -24,7 +24,7 @@ class PositionController extends Controller
      */
     public function create()
     {
-        return view('posts/create');
+        return view('positions/create');
     }
 
     /**
@@ -49,7 +49,7 @@ class PositionController extends Controller
         $position->f = $request->input('f');
         $position->save();
 
-        return redirect('/posts')->with('success', 'Data Saved!');
+        return redirect('/positions')->with('success', 'Data Saved!');
     }
 
     /**
@@ -60,7 +60,7 @@ class PositionController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "PositionController: show()";
     }
 
     /**
