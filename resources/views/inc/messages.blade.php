@@ -1,6 +1,6 @@
 @if(count($errors) > 0)
     @foreach($errors->all() as $error)
-        <div class="alert alert-danger">
+        <div class="alert alert-danger" style="color: #b91d19">
             {{$error}}
         </div>
     @endforeach
