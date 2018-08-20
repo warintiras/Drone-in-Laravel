@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class A extends Migration
+class CreatePositionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class A extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::create('positions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('x');
+            $table->string('y');
+            $table->string('f');
+            $table->string('move');
             $table->string('newx');
             $table->string('newy');
             $table->string('newf');
+            $table->timestamps();
         });
     }
 
@@ -27,8 +33,6 @@ class A extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('positions');
     }
 }

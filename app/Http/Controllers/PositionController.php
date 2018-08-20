@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Position;
 
 class PositionController extends Controller
 {
@@ -35,9 +35,6 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-
-
-        //Just for GITHUB. To be deleted.
         //Validate
         $this->validate($request, [
             'x' => 'required',
@@ -46,11 +43,11 @@ class PositionController extends Controller
         ]);
 
         //Insert data in database
-        $post = new Post; //model
-        $post->x = $request->input('x');
-        $post->y = $request->input('y');
-        $post->f = $request->input('f');
-        $post->save();
+        $position = new Position; //model
+        $position->x = $request->input('x');
+        $position->y = $request->input('y');
+        $position->f = $request->input('f');
+        $position->save();
 
         return redirect('/posts')->with('success', 'Data Saved!');
     }
